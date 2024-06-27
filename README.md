@@ -13,21 +13,21 @@ The code here describes the implementation of a Deep Convolutional GAN (DCGAN) f
 The CIFAR-10 dataset consists of 60,000 32x32 color images in 10 different classes. For the purpose of this project, the images are resized to 64x64 pixels. This dataset is commonly used for training machine learning and computer vision algorithms.
 
 # Methodology
-1. Importing Libraries
+1. Importing Libraries  
 First, the necessary libraries are imported. This includes PyTorch for building and training the neural networks, and torchvision for data handling and transformations.
-2. Setting Parameters
+2. Setting Parameters  
 The batch size and image size are defined, along with the transformation pipeline for the images.
-3. Loading the Dataset
+3. Loading the Dataset  
 The CIFAR-10 dataset is loaded and a DataLoader is created to handle the data in batches
-4. Defining the Generator Network
+4. Defining the Generator Network  
 The generator network is defined using a series of transposed convolutional layers, batch normalization layers, and ReLU activations. The final layer uses the Tanh activation function to scale the output to the range [-1, 1].
-5. Defining the Discriminator Network
+5. Defining the Discriminator Network  
 The discriminator network is defined using a series of convolutional layers, batch normalization layers, and LeakyReLU activations. The final layer uses the Sigmoid activation function to output a probability indicating whether the input image is real or fake.
-6. Weight Initialization
+6. Weight Initialization  
 The weights of both the generator and discriminator networks are initialized using a normal distribution.
-7. Loss Function and Optimizers
+7. Loss Function and Optimizers  
 Binary Cross-Entropy Loss (BCELoss) is used as the loss function. The Adam optimizer is used for both the generator and discriminator with specified learning rates and beta values.
-8. Training Loop
+8. Training Loop  
 The training loop runs for a specified number of epochs. For each batch, the discriminator is updated first, followed by the generator. Loss values are printed and images are saved at regular intervals.
-9. Results and Analysis
+9. Results and Analysis  
 Throughout the training process, the loss values for both the generator and discriminator are monitored. The generated images are saved at regular intervals, allowing for visual inspection of the generator's progress.
